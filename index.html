@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deckbyte Biller - Launching Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* CSS: Modern Dark Mode with Neon Accent */
+        :root {
+            --dark-background: #121212;
+            --card-background: #1F1F1F;
+            --text-color: #E0E0E0;
+            --accent-color: #ff0062; /* Neon Pink/Red */
+            --cta-hover: #e0005a;
+            --shadow-glow: 0 0 15px rgba(255, 0, 98, 0.5); /* Matching glow */
+            --font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--dark-background);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .landing-container {
+            max-width: 1100px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns for desktop */
+            gap: 50px;
+            text-align: left;
+        }
+
+        /* --- Hero Content (Left Side) --- */
+        .hero-content {
+            padding: 20px 0;
+        }
+
+        .tagline {
+            color: var(--accent-color);
+            font-size: 1.1em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .headline {
+            font-size: 3.8em;
+            font-weight: 800;
+            line-height: 1.1;
+            margin: 0 0 20px 0;
+        }
+
+        .subtext {
+            font-size: 1.3em;
+            color: #A0A0A0;
+            margin-bottom: 40px;
+        }
+
+        /* --- CTA Form --- */
+        .cta-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 450px;
+        }
+
+        .cta-form input[type="email"] {
+            padding: 15px 20px;
+            border: 2px solid var(--card-background);
+            border-radius: 8px;
+            background-color: var(--card-background);
+            color: var(--text-color);
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        .cta-form input[type="email"]:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+
+        .cta-form button {
+            padding: 16px 30px;
+            background-color: var(--accent-color);
+            color: var(--dark-background);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 800;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: var(--shadow-glow); /* Neon button glow */
+        }
+
+        .cta-form button:hover {
+            background-color: var(--cta-hover);
+            box-shadow: 0 0 25px rgba(255, 0, 106, 0.7);
+        }
+
+        .small-print {
+            font-size: 0.8em;
+            color: #606060;
+            margin-top: 10px;
+        }
+
+        /* --- Visual Mockup (Right Side) --- */
+        .app-visual {
+            background-color: var(--card-background);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px; 
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .visual-placeholder {
+            /* Optimized for actual media display */
+            width: 100%;
+            height: 100%; 
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* --- Responsive Design for Mobile --- */
+        @media (max-width: 900px) {
+            .landing-container {
+                grid-template-columns: 1fr; 
+                text-align: center;
+            }
+            .headline {
+                font-size: 2.5em;
+            }
+            .subtext {
+                font-size: 1.1em;
+            }
+            .cta-form form {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing-container">
+        
+        <div class="hero-content">
+            <p class="tagline">The Future of Billing and Invoicing</p>
+            
+            <h1 class="headline">
+                Stop <span style="color: var(--accent-color);">Wasting Time</span>. Start <span style="color: var(--accent-color);">Creating Value.</span>
+            </h1>
+            
+            <p class="subtext">
+               <strong>Deckbyte Biller</strong> is the all-in-one platform built for speed and simplicity. 
+                Sign up for early access and get 3 months free at launch.
+            </p>
+
+            <div class="cta-form">
+                <form action="#" method="POST">
+                    <input type="email" name="email" placeholder="Enter your best email address" required>
+                    <button type="submit">Join The Waitlist Now</button>
+                </form>
+                <p class="small-print">
+                    We hate spam. We'll only email you about the launch.
+                </p>
+            </div>
+        </div>
+
+        <div class="app-visual">
+            <div class="visual-placeholder">
+                <video controls autoplay loop muted style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
